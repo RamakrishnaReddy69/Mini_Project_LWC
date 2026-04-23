@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Discount Calculator inside flow">
+        <lightning-input label="Amount" value={amount} type="number"
+            onchange={handlechangeamount}>
+        </lightning-input>
+        <lightning-input label="Discount %" value={discount} type="number"
+            onchange={handlechangediscount}>
+        </lightning-input><br>
+        <lightning-button label="Result" onclick={handleresult} variant="brand"
+            class="slds-m-top_small">
+        </lightning-button>
+        <p class="Calculator result">
+            Final Amount :{finalAmount}<br>
+            Remaining Amount :{remainingAmount}
+        </p>
+        <p> the final amount is calculated after applying the discount </p>
+    </lightning-card>
+</template>
