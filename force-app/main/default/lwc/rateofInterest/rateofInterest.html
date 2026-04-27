@@ -1,5 +1,6 @@
 <template>
     <lightning-card title="Discount Calculator inside flow">
+
         <lightning-input label="Amount" value={amount} type="number"
             onchange={handlechangeamount}>
         </lightning-input>
@@ -15,4 +16,39 @@
         </p>
         <p> the final amount is calculated after applying the discount </p>
     </lightning-card>
+
+    <p class="slds-m-top_medium">
+        <b>Note:</b> This is a simple discount calculator implemented as a
+        Lightning Web Component (LWC) for use within Salesforce flows. It allows
+        users to input an amount and a discount percentage, and then calculates
+        the final amount after applying the discount, as well as the remaining
+        amount.
+    </p>
+    <lightning-dynamic-icon type="Eq" size="large" option="play"
+        class="slds-m-top_medium"></lightning-dynamic-icon>
+
+    <lightning-button-menu label="more item" icon-name="utility:down"
+        class="slds-m-top_medium">
+        <lightning-menu-item label="Salesforce"
+            value="salesforce"></lightning-menu-item>
+        <lightning-menu-item label="Google"
+            value="google"></lightning-menu-item>
+        <lightning-menu-item label="Microsoft"
+            value="microsoft"></lightning-menu-item>
+    </lightning-button-menu>
+    <lightning-button-stateful
+        label-when-of="Follow"
+        label-when-on="Following"
+        label-when-hover="Unfollow"
+        icon-name-when-off="utility:add"
+        icon-name-when-on="utility:check"
+        icon-name-when-hover="utility:close"
+        selected={selected}
+        onclick={handletoggle}></lightning-button-stateful>
+    <p class="slds-m-top_medium">
+        <b>Note:</b> The button above is a stateful button that toggles between
+        <b>{messages}</b> states when clicked. It also changes its icon
+        accordingly. This can be used to represent actions such as following or
+        unfollowing a user or item in a Salesforce application.
+    </p>
 </template>

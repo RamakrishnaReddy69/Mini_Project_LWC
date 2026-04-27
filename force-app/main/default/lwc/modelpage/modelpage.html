@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Model Page">
+        <div class="slds-p-around_small">
+            <!-- Input to enter Account Id (for testing) -->
+            <lightning-input label="Account Id" value={accountId} onchange={handleIdChange}></lightning-input>
+
+            <!-- Button to load account and open modal -->
+            <lightning-button label="Open Account Modal" variant="brand" onclick={openAccountModal} class="slds-m-top_small"></lightning-button>
+        </div>
+    </lightning-card>
+
+    <!-- Modal component -->
+    <c-modal header-title="Account Details" onsave={handleSave} record={accountRecord} data-id="account-modal"></c-modal>
+</template>

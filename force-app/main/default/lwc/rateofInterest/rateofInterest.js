@@ -29,4 +29,14 @@ export default class RateofInterest extends LightningElement {
         });
         this.dispatchEvent(event);  
      }
+
+     selected = false;
+     handletoggle(){
+        this.selected =! this.selected;
+     }
+     messages='';
+     constructor(){
+        super();
+        this.messages= "Follow and Following are the same in this context.";
+     }
 }

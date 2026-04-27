@@ -1,59 +1,15 @@
 <template>
-    <lightning-card title="BMI Calculator">
-        <div class="slds-p-horizontal_medium">
-            <div class="box">
-
-                <h1>Free BMI Calculator Check your body mass index and improve
-                    your health awareness </h1>
-                <p>Enter your weight and height to calculate your BMI.</p>
-            </div>
+    <lightning-card title='Account calling Apex' icon-name='custom:custom63'>
+        <div class="slds-m-around_medium">
+            <lightning-datatable
+                data={data}
+                columns={columns}
+                key-field="Id"
+                show-row-number-column
+                hide-checkbox-column
+                onrowselection={getSelectedName}>
+            </lightning-datatable>
         </div>
-        <!-- grid  function -->
-        <div class="slds-grid slds-gutters ">
-            <div class="slds-col">
-                <span class="gen">Gender</span>
-                <!-- input-grid   -->
-                <!-- input container -->
-                <div class="input-cont">
-                    <div class="slds-grid slds-gutters ">
-                        <div class="slds-col">
-                            <lightning-input type="text" placeholder=" Male"
-                                onchange={handlegender}>
-                            </lightning-input>
-                        </div>
-                        <div class="slds-col">
-                            <lightning-input type="text" placeholder="Female"
-                                onchange={handlegender}>
-                            </lightning-input>
-                        </div>
-                    </div>
-                </div>
-                <div class="height-con">
-                    <div class=" label-hg">
-                        <label class="label-label"> Height</label>
-                    </div>
-                    <div class="ft-wig">
-                        <lightning-input class="textbook-ht" type="number"
-                            placeholder="ft"
-                            onchange={handleheight}
-                            max-length="1"></lightning-input>
-                        <lightning-input class="textbook-ht" type="number"
-                            placeholder="in"
-                            onchange={handleheight}
-                            max-length="2"></lightning-input>
-                    </div>
-
-                </div>
-
-            </div>
-            <!-- second grid columns -->
-            <div class="slds-col">
-                <span>Age</span>
-            </div>
-            <div class="slds-col ">
-                <span>your BMI is</span>
-            </div>
-        </div>
-
     </lightning-card>
+
 </template>
